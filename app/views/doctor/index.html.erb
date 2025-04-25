@@ -1,0 +1,5 @@
+<h1>Doctor Dashboard</h1>
+<p>Welcome, Dr. <%= current_doctor.email %></p>
+
+<%= link_to "View Patients", patients_path, class: "btn btn-primary" %>
+<%= link_to "View Appointments", patient_appointments_path, class: "btn btn-secondary" %>

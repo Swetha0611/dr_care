@@ -1,0 +1,13 @@
+<h2>Welcome Doctor!</h2>
+
+<h3>Register New Patient</h3>
+<%= link_to 'New Patient', new_patient_path %>
+
+<h3>Register New Appointment</h3>
+<%= link_to 'New Appointment', new_patient_appointment_path %>
+
+<h3>All Patients</h3>
+<%= render @patients %>
+
+<h3>All Appointments</h3>
+<%= render @appointments %>

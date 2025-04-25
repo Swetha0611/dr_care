@@ -1,0 +1,26 @@
+<h2>Appointment register</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Consultation Problem</th>
+    <th>time</th>
+    <th>date</th>
+  </tr>
+<tbody>
+  <% @patient_appointment.each do |patient_appointment| %>
+    <tr>
+      <td><%= patient_appointment.name %></td>
+      <td><%= patient_appointment.age %></td>
+      <td><%= patient_appointment.consulting_problem %></td>
+      <td><%= patient_appointment.Time %></td>
+      <td><%= patient_appointment.date %></td>
+      <td>
+        <%= link_to 'Edit', edit_patient_appointment_path(patient_appointment), class: "btn btn-warning" %>
+        <%= link_to 'Delete', patient_appointment_path(patient_appointment), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

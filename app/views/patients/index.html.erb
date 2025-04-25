@@ -1,0 +1,24 @@
+<h2>Registered Patients</h2>
+<table border="1" cellpadding="8" cellspacing="0">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Patient Number</th>
+    <th>Consultation Problem</th>
+    <th>Consulting Fees</th>
+  </tr>
+<tbody>
+  <% @patients.each do |patient| %>
+    <tr>
+      <td><%= patient.name %></td>
+      <td><%= patient.patient_number %></td>
+      <td><%= patient.consultation_problem %></td>
+      <td><%= number_to_currency(patient.consulting_fees) %><td>
+      <td>
+        <%= link_to 'Edit', edit_patient_path(patient), class: "btn btn-warning" %>
+        <%= link_to 'Delete', patient_path(patient), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+      </td>
+    </tr>
+  <% end %>
+</tbody>
+</table>

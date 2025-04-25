@@ -1,0 +1,2 @@
+class PatientAppointment < ApplicationRecord
+end

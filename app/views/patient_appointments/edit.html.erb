@@ -1,0 +1,27 @@
+<h2>Edit Patient appointment</h2>
+
+<%= form_with model: @patient_appointment, local: true do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :age %>
+    <%= form.text_field :age %>
+  </div>
+  <div>
+    <%= form.label :Time %>
+    <%= form.text_field :Time %>
+  </div>
+  <div>
+    <%= form.label :consulting_problem %>
+    <%= form.text_field :consulting_problem %>
+  </div>
+   <div>
+    <%= form.label :date %>
+    <%= form.text_field :date %>
+  </div>
+  <div>
+    <%= form.submit "Update Patient appointment sucessfully", class: "btn btn-success" %>
+  </div>
+<% end %>
